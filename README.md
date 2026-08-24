@@ -17,7 +17,7 @@ Clone este repositório
 Abra o arquivo index.html no navegador (ou use a extensão Live Server no VS Code)
 Integrantes
 
-Carlos Eduardo oooooooooooooooooo
+Carlos Eduardo 
 Gabriel Campos
 João Vitor
-Ricardo Augusto performatico gay femboy e fedorento 
+Ricardo Augusto  
