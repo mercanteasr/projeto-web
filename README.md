@@ -17,7 +17,7 @@ Clone este repositório
 Abra o arquivo index.html no navegador (ou use a extensão Live Server no VS Code)
 Integrantes
 
-Carlos Eduardo 
+Carlos Eduardo Casu Filho
 Gabriel Campos
 João Vitor
 Ricardo Augusto  
