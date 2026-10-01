@@ -17,7 +17,7 @@ Clone este repositório
 Abra o arquivo index.html no navegador (ou use a extensão Live Server no VS Code)
 Integrantes
 
-Carlos Eduardo 
-Gabriel Campos
-João Vitor
-Ricardo Augusto  
+Carlos Eduardo Casu Filho
+Gabriel Campos de Souza
+João Vitor Souza Silva
+Ricardo Augusto Scalada Mercante
