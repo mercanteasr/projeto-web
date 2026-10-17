@@ -4,89 +4,435 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrilet</title>
+    <link rel="stylesheet" href="elements.css">
     <!-- Só lembrando que vamos fazer um popup com um loguin e um carrinho fictício depois que o professor começar javaScript-->
 </head>
 <body>
     <!--cabeçalho-->
     <header>
-     <h1>Corrilet</h1>
+        <a href="#" class="logo">
+            <span class="logo-icon">
+                <span class="montanha"></span>
+            </span>
+        <h1>Corrilet</h1>
         <nav>
             <a href="#produtos">Produtos</a>
             <a href="#contatos">Contatos</a>
             <a href="#categorias">Categorias</a>
         </nav>
     </header>
-
+ 
     <!--banner/tags -->
     <section class="banner">
         <h2>Novidade: Coleção de inverno 2026</h2>
         <p>Peças de moletom em até 30% OFF</p>
     </section>
-
+ 
     <!--Principais produtos-->
     <section id="produtos">
         <h2>Coleção de inverno</h2>
         <div class="produtos">
-
+            <!--Produto 1-->
             <article class="produto">
-                <img src="imgs/moletom.jpg" alt="moletom">
+                <img src="imgs/moletomcinzaa.jpg" alt="moletom">
                 <div class="descrição">
-                    <h3>Moletom Zip Hoodie Reversível, cinza com forro xadrez azul</h3>
+                    <h3>Moletom Zip Hoodie Reversível, cinza com forro xadrez azul.</h3>
                     <p class="preço">R$ 287,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+                    <img src="imgs/moletomcinzaa.jpg" alt="moletom">
+                    <div class="info-modal">
+                        <h2>Moletom cinza</h2>
+                        <p>
+                            Moletom Zip Hoodie Reversível, cinza com forro xadrez azul.
+                        </p>
+                        <p class="preco-modal">R$ 287,90</p>
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
             </article>
-
+ 
+ 
+            <!--produto 2 -->
+ 
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/calçamoletomp.jpeg" alt="calçamoletompreta">
                 <div class="descrição">
-
-                    <p class="preço"></p>
+                    <h3>Calça de Moletom Masculina Casual para Uso Diário e Deslocamento, Cintura com Cordão.</h3>
+                    <p class="preço">R$ 199,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/calçamoletomp.jpeg" alt="Calça preta">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Calça Moletom Preta </h2>
+ 
+                        <p>
+                            Calça de Moletom Masculina Casual para Uso Diário e Deslocamento, Cintura com Cordão.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 199,90</p>
+ 
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+ 
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
             </article>
-
+ 
+            <!--produto 3 -->
+ 
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/calçamoletomc.jpeg" alt="calçamoletomcinza">
                 <div class="descrição">
-                    <p class="preço"></p>
+                    <h3>Calça de moletom cinza, modelagem ampla, confortável e estilosa, ideal para o dia a dia.</h3>
+                    <p class="preço">R$ 199,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/calçamoletomc.jpeg" alt="calçamoletomcinza">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Calça moletom cinza</h2>
+ 
+                        <p>
+                            Calça de moletom cinza, modelagem ampla, confortável e estilosa, ideal para o dia a dia.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 199,90</p>
+ 
+                        <button onclick="addcarrinho">
+                            Adicionar carrinho
+                        </button>
+ 
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+ 
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
             </article>
-
+ 
+            <!--produto 4 -->
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/gorro.jpeg" alt="gorrocinza">
                 <div class="descrição">
-                    <p class="preço"></p>
+                    <h3>Gorro cinza de tricô com estampa preta, ideal para completar o visual e proteger do frio com estilo.</h3>
+                    <p class="preço">R$ 75,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/gorro.jpeg" alt="gorro">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Gorro Cinza</h2>
+ 
+                        <p>
+                            Gorro cinza de tricô com estampa preta, ideal para completar o visual e proteger do frio com estilo.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 75,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+ 
+                    </div>
+                </dialog>
             </article>
-
+ 
+            <!--produto 5 -->
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/gorroazul.jpeg" alt="gorroazul">
                 <div class="descrição">
-                    <p class="preço"></p>
+                    <h3>Gorro azul marinho com estampa geométrica, tecido de melhor qualidade, macio e confortável.</h3>
+                    <p class="preço">R$ 79,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/gorroazul.jpeg" alt="gorroazul">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Gorro azul</h2>
+ 
+                        <p>
+                            Gorro azul marinho com estampa geométrica, tecido de melhor qualidade, macio e confortável.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 79,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </dialog>
             </article>
-
+               <!--produto 6-->
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/moletompreto.jpeg" alt="moletompreto">
                 <div class="descrição">
-                    <p class="preço"></p>
+                    <h3>Moletom preto básico com capuz, zíper frontal e bolsos, ideal para um visual versátil e confortável.</h3>
+                    <p class="preço">R$ 239,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/moletompreto.jpeg" alt="Moletom preto">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Moletom preto básico</h2>
+ 
+                        <p>
+                            Moletom preto básico com capuz, zíper frontal e bolsos, ideal para um visual versátil e confortável.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 239,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+ 
+ 
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+ 
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
             </article>
-
+ 
+            <!--produto 7 -->
+ 
             <article class="produto">
-                <img src="" alt="">
+                <img src="imgs/camiseta.jpeg" alt="camisetabranca">
                 <div class="descrição">
-                    
-                    <p class="preço"></p>
+                    <h3>Camiseta branca básica, com gola redonda e modelagem casual, ideal para compor looks versáteis
+                        e confortáveis no dia a dia.</h3>
+                    <p class="preço">R$ 99,90</p>
                 </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/camiseta.jpeg" alt="Camiseta preta">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Camiseta básica</h2>
+ 
+                        <p>
+                            Camiseta básica com gola redonda e
+                            modelagem casual, ideal para o dia a dia.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 99,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+ 
+ 
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+ 
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
             </article>
+ 
+            <!--produto 8 -->
+ 
+            <article class="produto">
+                <img src="imgs/camisetapretahtml.jpeg" alt="camisetapreta">
+                <div class="descrição">
+                    <h3>Camiseta preta com estampa CSS branca, estilo urbano e moderno, ideal para o dia a dia..</h3>
+                    <p class="preço">R$ 109,90</p>
+                </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/camisetapretahtml.jpeg" alt="Camiseta preta">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Camiseta estampa CSS preta</h2>
+ 
+                        <p>
+                            Camiseta preta com estampa CSS branca, estilo urbano e moderno, ideal para o dia a dia.
+                        </p>
+ 
+                        <p class="preco-modal">R$ 109,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+ 
+ 
+                        <label for="tamanho-camiseta">Escolha o tamanho:</label>
+ 
+                        <select id="tamanho-camiseta">
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+                </dialog>
+            </article>
+ 
+            <!--produto 9 -->
+ 
+            <article class="produto">
+                <img src="imgs/cintos.jpeg" alt="cintosbasicos">
+                <div class="descrição">
+                    <h3>Cinto de Couro Dupla Face Masculino - Cor Preto e Marrom Café 2 em 1 </h3>
+                    <p class="preço">R$ 109,90</p>
+                </div>
+                <button onclick="this.parentElement.querySelector('dialog').showModal()">
+                    Inspecionar produto
+                </button>
+                <button onclick="addcarrinho">
+                    Adicionar ao carrinho
+                </button>
+                <dialog class="modal-produto">
+                    <button class="fechar-modal" onclick="this.parentElement.close()">
+                        &times;
+                    </button>
+ 
+ 
+                    <img src="imgs/cintos.jpeg" alt="cintosbasicos">
+ 
+ 
+                    <div class="info-modal">
+                        <h2>Cintos básicos - 2 cores</h2>
+ 
+                        <p>
+                            Cinto de Couro Dupla Face Masculino - Cor Preto e Marrom Café 2 em 1
+                        </p>
+ 
+                        <p class="preco-modal">R$ 79,90</p>
+                        <button onclick="addcarrinho">
+                            Adicionar ao carrinho
+                        </button>
+ 
+ 
+                        <label for="cor">Escolha o tamanho:</label>
+ 
+                        <select id="cor">
+                            <option value="preto">Preto</option>
+                            <option value="Marrom">Marrom</option>
+                        </select>
+                    </div>
+                </dialog>
+            </article>
+ 
         </div>
     </section>
-
+ 
     <!-- Rodapé -->
     <footer id="contatos">
         <p>Corrilet moda Masculina 2026 - Corriletfashion67@gmail.com - (00) 00000-0000</p>
         <p>Vista quem você é. Corrilet.</p>
     </footer>
-    
+ 
 </body>
 </html>
