@@ -513,3 +513,78 @@ footer p {
         max-height: 250px;
     }
 }
+/* Login */
+.btn-login {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+
+.modal-login {
+    margin: auto;
+    width: 90%;
+    max-width: 360px;
+    padding: 30px;
+    background-color: #171717;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.modal-login::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-login input {
+    padding: 10px;
+    font: inherit;
+    background-color: #111111;
+    color: #f5f5f5;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+.modal-login input:focus {
+    outline: none;
+    border-color: #f5f5f5;
+}
+
+.btn-entrar {
+    margin-top: 12px;
+    padding: 10px;
+    font: inherit;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    color: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-entrar:hover {
+    background-color: #cccccc;
+}
+
+.modal-login .fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    left: auto;
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    font-size: 24px;
+    cursor: pointer;
+}
