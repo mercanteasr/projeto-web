@@ -19,5 +19,5 @@ Integrantes
 
 Carlos Eduardo Casu Filho
 Gabriel Campos de Souza
-João Vitor Souza Silva
 Ricardo Augusto Scalada Mercante
+João Vitor Souza Silva
