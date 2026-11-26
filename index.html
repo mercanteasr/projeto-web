@@ -15,10 +15,21 @@
                 <span class="montanha"></span>
             </span>
         <h1>Corrilet</h1>
+        </a>
         <nav>
             <a href="#produtos">Produtos</a>
             <a href="#contatos">Contatos</a>
-            <a href="#categorias">Categorias</a>
+            <div class="menu-categorias">
+                <button type="button" id="btn-categorias" class="btn-categorias" aria-expanded="false" aria-controls="lista-categorias">Categorias &#9662;</button>
+                <ul id="lista-categorias" class="lista-categorias" hidden>
+                    <li><button type="button" data-filtro="todos" class="ativo">Todos</button></li>
+                    <li><button type="button" data-filtro="moletons">Moletons</button></li>
+                    <li><button type="button" data-filtro="calcas">Calças</button></li>
+                    <li><button type="button" data-filtro="toucas">Toucas</button></li>
+                    <li><button type="button" data-filtro="camisetas">Camisetas</button></li>
+                    <li><button type="button" data-filtro="acessorios">Acessórios</button></li>
+                </ul>
+            </div>
             <a href="admin.html">Admin</a>
         </nav>
         <div class="icones-topo">
@@ -73,7 +84,7 @@
         <h2>Coleção de inverno</h2>
         <div class="produtos">
             <!--Produto 1-->
-            <article class="produto">
+            <article class="produto" data-categoria="moletons">
                 <img src="imgs/moletomcinzaa.jpg" alt="moletom">
                 <div class="descrição">
                     <h3>Moletom Zip Hoodie Reversível, cinza com forro xadrez azul.</h3>
@@ -110,7 +121,7 @@
  
             <!--produto 2 -->
  
-            <article class="produto">
+            <article class="produto" data-categoria="calcas">
                 <img src="imgs/calcamoletomp.jpeg" alt="calcamoletompreta">
                 <div class="descrição">
                     <h3>Calça de Moletom Masculina Casual para Uso Diário e Deslocamento, Cintura com Cordão.</h3>
@@ -154,7 +165,7 @@
  
             <!--produto 3 -->
  
-            <article class="produto">
+            <article class="produto" data-categoria="calcas">
                 <img src="imgs/calcamoletomc.jpeg" alt="calcamoletomcinza">
                 <div class="descrição">
                     <h3>Calça de moletom cinza, modelagem ampla, confortável e estilosa, ideal para o dia a dia.</h3>
@@ -201,7 +212,7 @@
             </article>
  
             <!--produto 4 -->
-            <article class="produto">
+            <article class="produto" data-categoria="toucas">
                 <img src="imgs/gorro.jpeg" alt="gorrocinza">
                 <div class="descrição">
                     <h3>Gorro cinza de tricô com estampa preta, ideal para completar o visual e proteger do frio com estilo.</h3>
@@ -239,7 +250,7 @@
             </article>
  
             <!--produto 5 -->
-            <article class="produto">
+            <article class="produto" data-categoria="toucas">
                 <img src="imgs/gorroazul.jpeg" alt="gorroazul">
                 <div class="descrição">
                     <h3>Gorro azul marinho com estampa geométrica, tecido de melhor qualidade, macio e confortável.</h3>
@@ -275,7 +286,7 @@
                 </dialog>
             </article>
                <!--produto 6-->
-            <article class="produto">
+            <article class="produto" data-categoria="moletons">
                 <img src="imgs/moletompreto.jpeg" alt="moletompreto">
                 <div class="descrição">
                     <h3>Moletom preto básico com capuz, zíper frontal e bolsos, ideal para um visual versátil e confortável.</h3>
@@ -323,7 +334,7 @@
  
             <!--produto 7 -->
  
-            <article class="produto">
+            <article class="produto" data-categoria="camisetas">
                 <img src="imgs/camiseta.jpeg" alt="camisetabranca">
                 <div class="descrição">
                     <h3>Camiseta branca básica, com gola redonda e modelagem casual, ideal para compor looks versáteis
@@ -373,7 +384,7 @@
  
             <!--produto 8 -->
  
-            <article class="produto">
+            <article class="produto" data-categoria="camisetas">
                 <img src="imgs/camisetapretahtml.jpeg" alt="camisetapreta">
                 <div class="descrição">
                     <h3>Camiseta preta com estampa CSS branca, estilo urbano e moderno, ideal para o dia a dia..</h3>
@@ -421,7 +432,7 @@
  
             <!--produto 9 -->
  
-            <article class="produto">
+            <article class="produto" data-categoria="acessorios">
                 <img src="imgs/cintos.jpeg" alt="cintosbasicos">
                 <div class="descrição">
                     <h3>Cinto de Couro Dupla Face Masculino - Cor Preto e Marrom Café 2 em 1 </h3>

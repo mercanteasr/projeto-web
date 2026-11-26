@@ -232,3 +232,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mostrarCarrinho();
 });
+
+// página principal: filtro de produtos por categoria
+document.addEventListener("DOMContentLoaded", function () {
+    const btnCategorias = document.getElementById("btn-categorias");
+
+    // se não estiver na página principal, não faz nada
+    if (!btnCategorias) {
+        return;
+    }
+
+    const menu = document.getElementById("lista-categorias");
+    const opcoes = menu.querySelectorAll("button");
+    const produtos = document.querySelectorAll(".produto");
+    const titulo = document.querySelector("#produtos > h2");
+    const tituloOriginal = titulo.textContent;
+
+    function abrirMenu(abrir) {
+        menu.hidden = !abrir;
+        btnCategorias.setAttribute("aria-expanded", abrir);
+    }
+
+    // mostra só os produtos da categoria escolhida ("todos" mostra tudo)
+    function filtrar(categoria, nome) {
+        produtos.forEach(function (produto) {
+            produto.hidden = categoria !== "todos" && produto.dataset.categoria !== categoria;
+        });
+
+        titulo.textContent = categoria === "todos" ? tituloOriginal : nome;
+
+        opcoes.forEach(function (opcao) {
+            opcao.classList.toggle("ativo", opcao.dataset.filtro === categoria);
+        });
+    }
+
+    // abre e fecha o menu ao clicar em "Categorias"
+    btnCategorias.addEventListener("click", function () {
+        abrirMenu(menu.hidden);
+    });
+
+    // clique numa categoria: filtra, fecha o menu e rola até os produtos
+    menu.addEventListener("click", function (evento) {
+        const opcao = evento.target.closest("button");
+
+        if (!opcao) {
+            return;
+        }
+
+        filtrar(opcao.dataset.filtro, opcao.textContent.trim());
+        abrirMenu(false);
+        document.getElementById("produtos").scrollIntoView();
+    });
+
+    // clicar fora do menu ou apertar Esc também fecha
+    document.addEventListener("click", function (evento) {
+        if (!evento.target.closest(".menu-categorias")) {
+            abrirMenu(false);
+        }
+    });
+
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape") {
+            abrirMenu(false);
+        }
+    });
+});
+s

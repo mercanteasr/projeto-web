@@ -751,3 +751,81 @@ footer p {
 #btn-esvaziar {
     width: 100%;
 }
+
+/* Filtro por categorias */
+[hidden] {
+    display: none !important;
+}
+
+.menu-categorias {
+    position: relative;
+}
+
+.btn-categorias {
+    font: inherit;
+    color: #dddddd;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-categorias:hover,
+.btn-categorias[aria-expanded="true"] {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.lista-categorias {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    min-width: 180px;
+    margin-top: 8px;
+    padding: 8px;
+    list-style: none;
+    background-color: #1c1c1c;
+    border: 1px solid #333333;
+    border-radius: 14px;
+}
+
+.lista-categorias button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    font: inherit;
+    text-align: left;
+    color: #dddddd;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lista-categorias button:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.lista-categorias button.ativo {
+    font-weight: bold;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.lista-categorias button.ativo:hover {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+@media (max-width: 600px) {
+    .btn-categorias {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
