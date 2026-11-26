@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Corrilet</title>
+    <link rel="stylesheet" href="elements.css">
+</head>
+<body>
+    <!--cabeçalho-->
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <span class="montanha"></span>
+            </span>
+            <h1>Corrilet</h1>
+        </a>
+        <nav>
+            <a href="index.html#produtos">Produtos</a>
+            <a href="index.html#contatos">Contatos</a>
+            <a href="index.html#categorias">Categorias</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <main class="admin">
+        <h2>Cadastro de usuários</h2>
+
+        <!--formulário-->
+        <form id="form-admin" class="form-admin">
+            <label for="nome-admin">Nome do usuário</label>
+            <input type="text" id="nome-admin" required>
+
+            <label for="email-admin">E-mail</label>
+            <input type="email" id="email-admin" required>
+
+            <div class="botoes-admin">
+                <button type="submit" class="btn-entrar">Cadastrar</button>
+                <button type="button" id="btn-limpar" class="btn-limpar">Limpar campos</button>
+            </div>
+        </form>
+
+        <!--lista de usuários-->
+        <section class="usuarios">
+            <h2>Usuários cadastrados</h2>
+
+            <label for="pesquisa">Pesquisar por nome ou e-mail</label>
+            <input type="search" id="pesquisa" placeholder="Digite para pesquisar">
+
+            <ul id="lista-usuarios" class="lista-usuarios"></ul>
+
+            <button type="button" id="btn-excluir-todos" class="btn-excluir">Excluir todos</button>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contatos">
+        <p>Corrilet moda Masculina 2026 - Corriletfashion67@gmail.com - (00) 00000-0000</p>
+        <p>Vista quem você é. Corrilet.</p>
+    </footer>
+
+    <script src="global.js"></script>
+</body>
+</html>
