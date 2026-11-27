@@ -297,4 +297,97 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-s
+
+// cadastro e login (baseado no store() e no check() da aula 04 de JS)
+document.addEventListener("DOMContentLoaded", function () {
+    const CHAVE = "usuarios_corrilet";
+
+    function lerUsuarios() {
+        return JSON.parse(localStorage.getItem(CHAVE)) || [];
+    }
+
+    // cadastro: valida a senha e salva o usuário no local storage
+    const formCadastro = document.getElementById("form-cadastro");
+
+    if (formCadastro) {
+        formCadastro.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const nome = document.getElementById("nome-cadastro");
+            const email = document.getElementById("email-cadastro");
+            const telefone = document.getElementById("telefone-cadastro");
+            const nascimento = document.getElementById("nascimento-cadastro");
+            const senha = document.getElementById("senha-cadastro");
+            const confirmar = document.getElementById("confirmar-cadastro");
+
+            const minusculas = /[a-z]/g;
+            const maiusculas = /[A-Z]/g;
+            const numeros = /[0-9]/g;
+
+            const usuarios = lerUsuarios();
+            const jaExiste = usuarios.some(function (usuario) {
+                return usuario.email.toLowerCase() === email.value.trim().toLowerCase();
+            });
+
+            if (jaExiste) {
+                alert("Esse e-mail já está cadastrado");
+            } else if (senha.value.length > 8) {
+                alert("Máximo de 8 caracteres");
+            } else if (!senha.value.match(numeros)) {
+                alert("Deve conter 1 número");
+            } else if (!senha.value.match(maiusculas)) {
+                alert("Deve conter uma letra maiúscula");
+            } else if (!senha.value.match(minusculas)) {
+                alert("Deve conter uma letra minúscula");
+            } else if (senha.value !== confirmar.value) {
+                alert("As senhas não são iguais");
+            } else {
+                // mesma chave do admin, então quem se cadastra aparece na lista de lá
+                usuarios.push({
+                    id: Date.now(),
+                    data: new Date().toLocaleString("pt-BR"),
+                    nome: nome.value.trim(),
+                    email: email.value.trim(),
+                    telefone: telefone.value.trim(),
+                    nascimento: nascimento.value,
+                    senha: senha.value
+                });
+                localStorage.setItem(CHAVE, JSON.stringify(usuarios));
+
+                alert("Sua conta foi criada");
+                window.location.href = "login.html";
+            }
+        });
+    }
+
+    // login: confere o e-mail e a senha com o que foi salvo no cadastro
+    const formsLogin = document.querySelectorAll(".form-login");
+
+    formsLogin.forEach(function (form) {
+        form.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const email = form.querySelector("input[type='email']").value.trim().toLowerCase();
+            const senha = form.querySelector("input[type='password']").value;
+
+            const usuario = lerUsuarios().find(function (u) {
+                return u.email.toLowerCase() === email && u.senha === senha;
+            });
+
+            if (usuario) {
+                alert("Login realizado. Bem-vindo(a), " + usuario.nome + "!");
+                form.reset();
+
+                // no pop-up só fecha; na página de login volta pra loja
+                const popup = form.closest("dialog");
+                if (popup) {
+                    popup.close();
+                } else {
+                    window.location.href = "index.html";
+                }
+            } else {
+                alert("Erro ao fazer login");
+            }
+        });
+    });
+});

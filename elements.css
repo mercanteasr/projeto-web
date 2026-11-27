@@ -829,3 +829,21 @@ footer p {
         font-size: 14px;
     }
 }
+
+/* Cadastro e login */
+.regras-senha {
+    margin: 6px 0 4px 18px;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+.link-conta {
+    margin-top: 12px;
+    text-align: center;
+    color: #bdbdbd;
+}
+
+.link-conta a {
+    color: #f5f5f5;
+    font-weight: bold;
+}
