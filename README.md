@@ -12,6 +12,8 @@ Estrutura do projeto
 ├── global.js        JavaScript do admin, carrinho, categorias, cadastro e login
 └── README.md
 
+Site publicado: https://mercanteasr.github.io/projeto-web/
+
 Como abrir
 Clone este repositório
 Abra o arquivo index.html no navegador (ou use a extensão Live Server no VS Code)
@@ -20,4 +22,4 @@ Integrantes
 Carlos Eduardo Casu Filho
 Gabriel Campos de Souza
 Ricardo Augusto Scalada Mercante
-João Vitor Souza Silva
+João Vitor Souza Silva
